@@ -14,17 +14,17 @@ main {
  justify-content: center;
  align-items: center;
  margin-top: 3em;
- width: 100%;
+ width: 100%; /* Make responsive */ 
  height: 40em;
  background: #F5F5F5;
- box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
  border-radius: 10px;
 }
 
 .dice--container {
   display: grid;
-  grid-template: auto auto / repeat(5, 1fr);
-  gap: 1em;
+  grid-template: auto auto / repeat(5, 1fr); /*Modify 1fr for bigger screens*/
+  gap: 2em;
 }
 
 .die--box {
@@ -43,9 +43,10 @@ font-family: 'Karla';
 font-style: normal;
 font-weight: 700;
 font-size: 2.2rem;
-line-height: 24px;
+line-height: 1em;
 text-align: center;
 color: #2B283A;
+cursor: pointer;
 }
  
 
