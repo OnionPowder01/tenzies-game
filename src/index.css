@@ -7,12 +7,13 @@ body {
   background: #0B2434;
   padding: 20px;
   height: 100%;
+  font-family: 'Karla', sans-serif;
 }
 
 main {
  display: flex;
  flex-direction: column;
- justify-content: center;
+ justify-content: space-around;
  align-items: center;
  margin-top: 3em;
  width: 100%; /* Make responsive */ 
@@ -51,19 +52,27 @@ cursor: pointer;
 }
 
 .roll--btn {
-  border-style:none;
-  margin-top:50px;
+  border:none;
   width: 10em;
   height: 3.9em;
   background: #5035FF;
   box-shadow: 0px 4.8px 9px rgba(0, 0, 0, 0.18);
   border-radius: 6px;
-  font-family: 'Karla';
+  font-family: 'Karla', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.5rem;
- color: #FFFFFF;
+  color: #FFFFFF;
+  cursor:pointer;
+}
+
+.roll--.roll--btn{
+  outline: none;
+}
+
+.roll--btn:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
  
 
