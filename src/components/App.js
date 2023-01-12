@@ -4,6 +4,7 @@ import Die from './Die'
 export default function App() {
 
     const [dice, setDice] = useState(allNewDice())
+    
 
 function allNewDice() {
     const newDice = [];
@@ -20,11 +21,16 @@ const diceElements = dice.map(die => {
     )
 })
 
+function rollDice(){
+    setDice(() => allNewDice())
+}
+
 return(
     <main>
         <div className="dice--container">
         {diceElements}
         </div>
+        <button className="roll--btn" onClick={rollDice}>Roll Dice</button>
     </main>
     
 )
