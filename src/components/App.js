@@ -14,9 +14,7 @@ function allNewDice() {
             value: Math.ceil(Math.random() * 6), 
             isHeld: false,
             id: nanoid()
-            
-        })
-        
+        })  
      }
      
      return newDice;
@@ -24,18 +22,26 @@ function allNewDice() {
 
 const diceElements = dice.map(die => {
     return(
-        <Die value={die.value} isHeld={die.isHeld} id={die.id}/>
+        <Die value={die.value} 
+        isHeld={die.isHeld} 
+        id={die.id}
+        holdDice={holdDice}
+        />
     )
 })
-
 
 function rollDice(){
     setDice(() => allNewDice())
 }
 
+function holdDice(diceId) {
+    console.log(diceId)
+}
+
 return(
     <main>
-        <div className="dice--container">
+        
+        <div className="dice--container" holdDice={holdDice}>
         {diceElements}
         </div>
         <button className="roll--btn" onClick={rollDice}>Roll Dice</button>
