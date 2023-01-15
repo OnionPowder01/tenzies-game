@@ -6,7 +6,6 @@ body {
   margin: 0;
   background: #0B2434;
   padding: 20px;
-  height: 100%;
   font-family: 'Karla', sans-serif;
 }
 
@@ -25,11 +24,15 @@ main {
 
 .dice--container {
   display: grid;
-  grid-template: auto auto / repeat(5, auto); /*Modify 1fr for bigger screens*/
+  grid-template: auto auto / repeat(5, 1fr); /*Modify 1fr for bigger screens*/
   gap: 4em;
-  width: 90%;
-  margin-left: auto;
+  max-width: 60%;
+  
+  align-items: center;
+  justify-content: center;
+  padding: auto;
 }
+
 
 .die--box {
   width: 6em;
@@ -76,6 +79,46 @@ cursor: pointer;
 .roll--btn:active {
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
- 
 
+
+@media screen and (max-width: 480px) {
+  body {
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; /* Make responsive */ 
+    height: 400px;
+   }
+
+   .dice--container {
+    display: grid;
+    grid-template: auto auto / repeat(5, 1fr); /*Modify 1fr for bigger screens*/
+    gap: 20px;
+    width: 350px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .die--box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .die--value {
+    font-size: 15px;
+    line-height: 20px;
+  
+  }
+ 
+}
 
