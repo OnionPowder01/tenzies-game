@@ -10,7 +10,7 @@ const styles = {backgroundColor: props.isHeld ? '#59E391' : ''}
         <div 
         className="die--box" 
         style={styles}
-        onClick={() => props.holdDice(props.id)}
+        onClick={() => props.holdDice(props.id, props.value)}
         >
             <div className="die--value">{props.value}</div>
         </div>
