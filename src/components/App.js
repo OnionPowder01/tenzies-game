@@ -35,7 +35,12 @@ function rollDice(){
 }
 
 function holdDice(diceId) {
-    console.log(diceId)
+    setDice(oldDice => oldDice.map(die => {
+        return die.id === diceId ? 
+        {...die, isHeld: !die.isHeld} :
+        die
+    }))
+       
 }
 
 return(
@@ -48,5 +53,6 @@ return(
     </main>
     
 )
+
 
 }
