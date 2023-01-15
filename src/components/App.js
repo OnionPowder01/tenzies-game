@@ -4,22 +4,26 @@ import { nanoid } from "nanoid"
 
 export default function App() {
 
-    const [dice, setDice] = useState(allNewDice())
+const [dice, setDice] = useState(allNewDice())
+const [number, setNumber] = useState(0)
     
-
+function generateNewDie() {
+    return {
+        value: Math.ceil(Math.random() * 6),
+        isHeld: false,
+        id: nanoid()
+        
+    }
+}
+    
 function allNewDice() {
     const newDice = [];
     for (let i = 0; i < 10; i++) {
-        newDice.push({
-            value: Math.ceil(Math.random() * 6), 
-            isHeld: false,
-            id: nanoid()
-        })  
+        newDice.push(generateNewDie())  
      }
      
      return newDice;
 }
-console.log(dice)
 
 const diceElements = dice.map(die => {
     return(
@@ -27,6 +31,7 @@ const diceElements = dice.map(die => {
         isHeld={die.isHeld} 
         id={die.id}
         holdDice={holdDice}
+        key={die.id}
         />
     )
 })
@@ -35,22 +40,26 @@ function rollDice(){
     setDice(oldDice => oldDice.map(die => {
         return die.isHeld ?
         {...die} :
-        {value: Math.ceil(Math.random() * 6), 
-        isHeld: false,
-        id: nanoid() 
-            }
+        generateNewDie()
     }))
 }
        
     
-
-function holdDice(diceId) {
+function holdDice(diceId, diceNumber) {
+    if(number === 0) {
+        firstDiceValue(diceId, diceNumber)
+    }
+    if(number === diceNumber || number === 0) {
     setDice(oldDice => oldDice.map(die => {
         return die.id === diceId ? 
         {...die, isHeld: !die.isHeld} :
         die
     }))
-       
+    } 
+}
+
+function firstDiceValue(diceNumber) {
+    setNumber(diceNumber)
 }
 
 return(
