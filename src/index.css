@@ -110,6 +110,7 @@ cursor: pointer;
     align-items: center;
     width: 90vw;
     height: 70vh;
+    margin-top: 2em;
    }
 
    .title {
