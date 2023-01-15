@@ -19,6 +19,7 @@ function allNewDice() {
      
      return newDice;
 }
+console.log(dice)
 
 const diceElements = dice.map(die => {
     return(
@@ -30,9 +31,18 @@ const diceElements = dice.map(die => {
     )
 })
 
-function rollDice(){
-    setDice(() => allNewDice())
+function rollDice(){ 
+    setDice(oldDice => oldDice.map(die => {
+        return die.isHeld ?
+        {...die} :
+        {value: Math.ceil(Math.random() * 6), 
+        isHeld: false,
+        id: nanoid() 
+            }
+    }))
 }
+       
+    
 
 function holdDice(diceId) {
     setDice(oldDice => oldDice.map(die => {
