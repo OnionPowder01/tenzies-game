@@ -12,7 +12,8 @@ body {
 main {
  display: flex;
  flex-direction: column;
- gap: 20px;
+ justify-content: space-around;
+ gap: 50px;
  align-items: center;
  margin-top: 30px;
  width: 100%; /* Make responsive */ 
@@ -22,14 +23,14 @@ main {
 }
 
 .title {
-  font-size: 30px;
+  font-size: 60px;
   margin: 5px;
   margin-bottom: -5px;
 }
 
 .instructions {
   font-family: 'Sans', sans-serif;
-  font-size: 10px;
+  font-size: 30px;
   font-weight: 500;
   margin: 10px;
   text-align: center;
@@ -37,19 +38,18 @@ main {
 
 .dice--container {
   display: grid;
-  grid-template: auto auto / repeat(5, 1fr); /*Modify 1fr for bigger screens*/
-  gap: 20px;
+  grid-template: auto auto / repeat(5, 1fr); 
   max-width: 40%;
-
   align-items: center;
   justify-content: center;
   padding: auto;
+  gap: 20px;
 }
 
 
 .die--box {
-  width: 40px;
-  height: 40px;
+  width: 100px;
+  height: 100px;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
@@ -58,7 +58,7 @@ main {
   align-items: center;
 }
 .dice--image {
-  width: 38px;
+  width: 95px;
   border-radius: 5px;
   border: 2px solid black;
 }
@@ -76,15 +76,15 @@ cursor: pointer;
 
 .roll--btn {
   border:none;
-  width: 10%;
-  height: 10%;
+  width: 130px;
+  height: 50px;
   background: #5035FF;
   box-shadow: 0px 4.8px 9px rgba(0, 0, 0, 0.18);
   border-radius: 6px;
   font-family: 'Karla', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 10px;
+  font-size: 20px;
   line-height: 20px;
   color: #FFFFFF;
   cursor:pointer;
