@@ -3,6 +3,7 @@ import Die from './Die'
 import { nanoid } from "nanoid"
 import Confetti from 'react-confetti'
 
+
 export default function App() {
 
 const [dice, setDice] = useState(allNewDice())
@@ -93,6 +94,7 @@ function newGame(){
 
 return(
     <main>
+        
         {tenzies && <Confetti/>}
         <h1 className="title">Tenzies</h1>
         <p className="instructions">Roll until all dice are the same. 
