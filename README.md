@@ -4,7 +4,7 @@
 
 ![This is an image](https://user-images.githubusercontent.com/106592392/212931956-7f0f02cd-afb7-408b-bdfa-3d6e8a31fee6.png)
 
-React tenzies game 
+Introducing Tenzies, a fun and interactive game built using React.js. The game is a modern twist on the classic Tic-Tac-Toe game. The objective is to get ten of your dice faces to be the same. The game features a clean and minimalistic design, allowing for easy navigation and intuitive gameplay. The game is fully responsive, making it accessible on any device.
 
 ### Technologies Used
 
