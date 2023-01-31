@@ -102,7 +102,7 @@ return(
         <div className="dice--container" holdDice={tenzies ? newGame : holdDice}>
         {diceElements}
         </div>
-        <button className="roll--btn" onClick={tenzies ? newGame : rollDice}>{tenzies ? 'New Game' : 'Roll Dice'}</button>
+        <button className={tenzies ? 'roll--btn animate-bounce' : 'roll--btn'} onClick={tenzies ? newGame : rollDice}>{tenzies ? 'New Game' : 'Roll Dice'}</button>
     </main>
     
 )
