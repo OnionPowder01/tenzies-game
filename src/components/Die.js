@@ -17,7 +17,7 @@ const diceIndex = props.value - 1
     
     return(
         <div 
-        className="die--box" 
+        className="die--box hover:rotate-180 duration-1000" 
         style={styles}
         onClick={() => props.holdDice(props.id, props.value)}
         >
